@@ -1,0 +1,10 @@
+(name [while …])
+
+(trigger
+    (tab while))
+
+(only-in source.php)
+
+(snippet [while (%{1="%{a} <= 10"}) {
+	%{0="# code..."}
+}])

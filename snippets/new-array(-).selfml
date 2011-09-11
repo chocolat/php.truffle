@@ -1,0 +1,8 @@
+(name [$… = array (…)])
+
+(trigger
+    (tab array))
+
+(only-in source.php)
+
+(snippet [$%{1="arrayName"} = array('%{2}' => %{3}%{4=","} %{0});])

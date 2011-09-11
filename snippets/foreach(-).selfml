@@ -1,0 +1,10 @@
+(name [foreach …])
+
+(trigger
+    (tab foreach))
+
+(only-in source.php)
+
+(snippet [foreach ($%{1="variable"} as $%{2="key"}%{3=" => $%{4="value"}"}) {
+	%{0="# code..."}
+}])

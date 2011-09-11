@@ -1,0 +1,20 @@
+(trigger)
+
+(name [Wrap Docblock at 80 Characters])
+
+(only-in comment.block.documentation.phpdoc.php)
+
+(input nothing)
+
+(output after-selected)
+
+(save nothing)
+
+(script [#!/usr/bin/ruby
+col = ENV['TM_COLUMN_NUMBER'].to_i
+start_col = ENV['TM_CURRENT_LINE'].index('*')
+if col - start_col >= 80
+  puts
+  print " " * start_col + "*"
+end
+print " "])

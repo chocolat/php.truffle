@@ -1,0 +1,20 @@
+(name Header)
+
+(trigger
+    (tab doc_h))
+
+(only-in source.php)
+
+(snippet [/**
+ * %{1}
+ *
+ * @author %{PHPDOC_AUTHOR="%{TM_FULLNAME}"}
+ * @version $Id$
+ * @copyright `echo $TM_ORGANIZATION_NAME`, `date +"%e %B, %Y" | sed 's/^ //'`
+ * @package %{3="default"}
+ **/
+
+/**
+ * Define DocBlock
+ **/
+])

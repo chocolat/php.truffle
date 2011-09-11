@@ -1,0 +1,8 @@
+(name [<?php echo htmlentities(…) ?>])
+
+(trigger
+    (tab echoh))
+
+(only-in text.html)
+
+(snippet [<?%{TM_PHP_OPEN_TAG_WITH_ECHO="php echo"} htmlentities(%{1="$var"}, ENT_QUOTES, 'utf-8') ?>%{0}])

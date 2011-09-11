@@ -1,0 +1,16 @@
+(trigger
+    (key [[enter]]))
+
+(name [Special: Return Inside an Empty Tag])
+
+(only-in [source.php.embedded.line.empty.html source.php])
+
+(input selection scope)
+
+(output snippet)
+
+(save nothing)
+
+(script [exit_insert_snippet "
+\$0
+?"])

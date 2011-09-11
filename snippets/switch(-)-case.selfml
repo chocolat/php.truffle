@@ -1,0 +1,10 @@
+(name [case …])
+
+(trigger
+    (tab case))
+
+(only-in source.php)
+
+(snippet [case '%{1="variable"}':
+	%{0="# code..."}
+	break;])

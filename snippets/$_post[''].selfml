@@ -1,0 +1,8 @@
+(name [POST['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_POST['%{1="variable"}']])

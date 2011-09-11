@@ -1,0 +1,8 @@
+(name [require …])
+
+(trigger
+    (tab req))
+
+(only-in source.php)
+
+(snippet [require '%{1="file"}';%{0}])

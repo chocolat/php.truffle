@@ -1,0 +1,8 @@
+(name [SERVER['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_SERVER['%{1="variable"}']])

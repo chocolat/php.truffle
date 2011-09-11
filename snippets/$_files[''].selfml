@@ -1,0 +1,8 @@
+(name [FILES['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_FILES['%{1="variable"}']])

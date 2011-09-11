@@ -1,0 +1,11 @@
+(name Heredoc)
+
+(trigger
+    (tab <<<))
+
+(only-in source.php)
+
+(snippet [<<<%{1="HTML"}
+%{2="content here"}
+%{1};
+])

@@ -1,0 +1,8 @@
+(name [<?php $this->… ?>])
+
+(trigger
+    (tab this))
+
+(only-in [text.html - source])
+
+(snippet [<?%{TM_PHP_OPEN_TAG="php"} $this->%{0} ?>])

@@ -1,0 +1,8 @@
+(name [$… = ( … ) ? … : …])
+
+(trigger
+    (tab if?))
+
+(only-in source.php)
+
+(snippet [$%{1="retVal"} = (%{2="condition"}) ? %{3="a"} : %{4="b"} ;])

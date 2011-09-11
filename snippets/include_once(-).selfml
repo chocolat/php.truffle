@@ -1,0 +1,8 @@
+(name [include_once …])
+
+(trigger
+    (tab incl1))
+
+(only-in source.php)
+
+(snippet [include_once '%{1="file"}';%{0}])

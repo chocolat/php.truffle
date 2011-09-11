@@ -1,0 +1,10 @@
+(name [elseif …])
+
+(trigger
+    (tab elseif))
+
+(only-in source.php)
+
+(snippet [elseif (%{1="condition"}) {
+	%{0="# code..."}
+}])

@@ -1,0 +1,10 @@
+(name [else …])
+
+(trigger
+    (tab else))
+
+(only-in source.php)
+
+(snippet [else {
+	%{0="# code..."}
+}])

@@ -1,0 +1,8 @@
+(name [<?php echo $this->… ?>])
+
+(trigger
+    (tab ethis))
+
+(only-in [text.html - source])
+
+(snippet [<?%{TM_PHP_OPEN_TAG_WITH_ECHO="php echo"} $this->%{0} ?>])

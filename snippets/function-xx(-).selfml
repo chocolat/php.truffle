@@ -1,0 +1,11 @@
+(name [function …])
+
+(trigger
+    (tab fun))
+
+(only-in source.php)
+
+(snippet [%{1="public "}function %{2="FunctionName"}(%{3="$%{4="value"}%{5="=''"}"})
+{
+	%{0="# code..."}
+}])

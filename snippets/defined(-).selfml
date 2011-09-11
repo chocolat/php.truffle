@@ -1,0 +1,8 @@
+(name [defined(…)])
+
+(trigger
+    (tab def?))
+
+(only-in source.php)
+
+(snippet [%{1}defined('%{2}')%{0}])

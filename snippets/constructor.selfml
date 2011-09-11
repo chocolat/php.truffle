@@ -1,0 +1,10 @@
+(name [function __construct])
+
+(trigger
+    (tab con))
+
+(only-in source.php)
+
+(snippet [function __construct(%{1="$%{2="foo"}%{3=" = %{4="null"}"}"}) {
+	%{2/.+/$this->$0 = \$$0;/}%{0}
+}])

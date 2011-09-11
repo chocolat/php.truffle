@@ -1,0 +1,10 @@
+(name [<?php foreach (…) … <?php endforeach ?>])
+
+(trigger
+    (tab foreach))
+
+(only-in text.html)
+
+(snippet [<?%{TM_PHP_OPEN_TAG="php"} foreach ($%{1="variable"} as $%{2="key"}%{3=" => $%{4="value"}"}): ?>
+	%{0}
+<?%{TM_PHP_OPEN_TAG="php"} endforeach ?>])

@@ -1,0 +1,10 @@
+(name [<?php if (…) ?> … <?php endif ?>])
+
+(trigger
+    (tab if))
+
+(only-in text.html)
+
+(snippet [<?%{TM_PHP_OPEN_TAG="php"} if (%{1="condition"}): ?>
+	%{0}
+<?%{TM_PHP_OPEN_TAG="php"} endif ?>])

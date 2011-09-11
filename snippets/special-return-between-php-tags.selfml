@@ -1,0 +1,10 @@
+(name [Special: Return Between PHP Tags])
+
+(trigger
+    (key [[enter]]))
+
+(only-in meta.consecutive-tags.php)
+
+(snippet [
+	%{0}
+])

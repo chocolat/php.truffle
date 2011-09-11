@@ -1,0 +1,8 @@
+(name [<?php … ?>])
+
+(trigger
+    (tab php))
+
+(only-in text.html)
+
+(snippet [<?%{TM_PHP_OPEN_TAG="php"} %{0} ?>])

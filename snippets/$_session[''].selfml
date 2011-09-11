@@ -1,0 +1,8 @@
+(name [SESSION['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_SESSION['%{1="variable"}']])

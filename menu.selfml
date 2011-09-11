@@ -1,0 +1,39 @@
+(menu command.run-php
+    ---
+    (submenu Declarations
+        (submenu [Wrapped in <?php … ?>] snippet.<?php-?> snippet.<?php-echo-___-?> [snippet.<?php-echo-htmlentities(___)-?>] [snippet.<?php-if-(___)-?>-___-<?php-endif-?>] [snippet.<?php-if-(___)-?>-___-<?php-else-?>-___-<?php-endif-?>] snippet.<?php-else-?> [snippet.<?php-foreach-(___)-___-<?php-endforeach-?>] snippet.<?php-$this->…-?> snippet.<?php-echo-$this->…-?>)
+        [snippet.if(-)]
+        [snippet.if(-)-else(-)]
+        [snippet.else-{}]
+        [snippet.elseif(-)]
+        [snippet.for(-)]
+        [snippet.foreach(-)]
+        [snippet.switch(-)]
+        [snippet.switch(-)-case]
+        [snippet.while(-)]
+        [snippet.do-while(-)]
+        [snippet.class-{-}]
+        [snippet.function-xx(-)]
+        snippet.constructor
+        ---
+        snippet.?>…<?php
+        ---
+        snippet.throw
+        [snippet.try-{-___-}-catch-(___)-{-___-}]
+        command.insert-call-to-parent)
+    (submenu Globals [snippet.$globals['']] [snippet.$_cookie['']] [snippet.$_env['']] [snippet.$_files['']] [snippet.$_get['']] [snippet.$_post['']] [snippet.$_request['']] [snippet.$_server['']] [snippet.$_session['']])
+    (submenu Return snippet.return-$retval; snippet.return-true; snippet.return-false;)
+    (submenu PHPDoc command.documentation-for-tag --- snippet.start-docblock command.post-doc --- snippet.phpdoc-class snippet.phpdoc-class-var --- snippet.phpdoc-constant-definition --- snippet.phpdoc-function snippet.phpdoc-function-signature --- snippet.phpdoc-header snippet.phpdoc-interface)
+    (submenu Support snippet.include-textmate-support-script snippet.php-error-catching)
+    [snippet.define(-)]
+    [snippet.defined(-)]
+    [snippet.require(-)]
+    [snippet.require_once(-)]
+    [snippet.include(-)]
+    [snippet.include_once(-)]
+    ---
+    snippet.echo-___
+    snippet.heredoc
+    [snippet.new-array(-)]
+    snippet.if-?-a-b;
+    ---)

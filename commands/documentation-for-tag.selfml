@@ -1,0 +1,17 @@
+(trigger
+    (key [[ctrl]H]))
+
+(name [Documentation for Tag])
+
+(only-in comment.block.documentation.phpdoc.php)
+
+(input nothing)
+
+(output tooltip)
+
+(save nothing)
+
+(script [if grep <<<${TM_CURRENT_WORD:-!} -Esq '[@a-zA-Z]+'
+	then exit_show_html "<meta http-equiv='Refresh' content='0;URL=http://manual.phpdoc.org/HTMLframesConverter/earthli/phpDocumentor/tutorial_tags.${TM_CURRENT_WORD#@}.pkg.html'>"
+	else echo "Nothing to lookup (hint: place the caret on a tag)"
+fi])

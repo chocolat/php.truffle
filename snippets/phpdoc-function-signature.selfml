@@ -1,0 +1,14 @@
+(name [Function Signature])
+
+(trigger
+    (tab doc_s))
+
+(only-in source.php)
+
+(snippet [/**
+ * %{4="undocumented function"}
+ *
+ * @return %{5="void"}
+ * @author %{PHPDOC_AUTHOR="%{TM_FULLNAME}"}%{6}
+ **/
+%{1}function %{2}(%{3});%{0}])

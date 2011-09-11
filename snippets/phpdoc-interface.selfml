@@ -1,0 +1,16 @@
+(name Interface)
+
+(trigger
+    (tab doc_i))
+
+(only-in source.php)
+
+(snippet [/**
+ * %{2="undocumented class"}
+ *
+ * @package %{3="default"}
+ * @author %{PHPDOC_AUTHOR="%{TM_FULLNAME}"}
+ **/
+interface %{1}
+{%{0}
+} // END interface %{1}])

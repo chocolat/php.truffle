@@ -1,0 +1,8 @@
+(name [require_once …])
+
+(trigger
+    (tab req1))
+
+(only-in source.php)
+
+(snippet [require_once '%{1="file"}';%{0}])

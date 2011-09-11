@@ -1,0 +1,8 @@
+(name [$GLOBALS['…']])
+
+(trigger
+    (tab globals))
+
+(only-in source.php)
+
+(snippet [$GLOBALS['%{1="variable"}']%{2=" = "}%{3="something"}%{4=";"}%{0}])

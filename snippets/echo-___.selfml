@@ -1,0 +1,8 @@
+(name [echo "…"])
+
+(trigger
+    (tab echo))
+
+(only-in source.php)
+
+(snippet [echo "%{1="string"}"%{0};])

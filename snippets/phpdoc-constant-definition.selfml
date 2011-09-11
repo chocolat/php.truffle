@@ -1,0 +1,11 @@
+(name [Constant Definition])
+
+(trigger
+    (tab doc_d))
+
+(only-in source.php)
+
+(snippet [/**
+ * %{3="undocumented constant"}
+ **/
+define(%{1}, %{2});%{0}])

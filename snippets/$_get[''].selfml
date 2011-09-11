@@ -1,0 +1,8 @@
+(name [GET['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_GET['%{1="variable"}']])

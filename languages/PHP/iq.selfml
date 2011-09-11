@@ -1,0 +1,53 @@
+(detector
+    (content-matches [^#!.*(?<!-)php[0-9]{0,1}\b]))
+
+(folding
+    (start [(/\*|\{\s*$|<<<HTML)])
+    (stop [(\*/|^\s*\}|^HTML;)]))
+
+(in entity.name.goto-label.php
+    (symbol-list
+        (transformation s/$/:/a)))
+
+(in support.function.magic.php
+    (symbol-list))
+
+(shell-variables
+    (TM_COMMENT_START [// ])
+    (TM_COMMENT_START_2 [# ])
+    (TM_COMMENT_START_3 /*)
+    (TM_COMMENT_END_3 */))
+
+(comment.line [// ])
+
+(comment.line [# ])
+
+(in [meta.include.php string.quoted])
+
+(in [meta.include.php string.quoted]
+    (no-spellchecking))
+
+(in comment.block.documentation.phpdoc.php
+    (spellchecking))
+
+(indentation.decrease [(?x) ^ (.*\*/)? \s* \} ( [^}{"']* \{ | \s* while \s* \( .* )? [;\s]* (//.*|/\*.*\*/\s*)? $|<\?(php)?\s+(else(if)?|end(if|for(each)?|while))])
+
+(indentation.increase-next-line-only [^(?!.*(#|//|\*/|<\?))(?!.*[};:]\s*(//|/\*.*\*/\s*$)).*[^\s;:{}]\s*$|<\?php.+?\b(if|else(?:if)?|for(?:each)?|while)\b.*:(?!.*end\1)])
+
+(pair “
+    ”
+    (highlight))
+
+(pair `[`
+    `]`
+    (highlight))
+
+(pair [(]
+    [)]
+    (highlight))
+
+(pair [{]
+    [}]
+    (highlight))
+
+(in [entity.name.function.php, support.function.magic.php])

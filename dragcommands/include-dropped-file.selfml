@@ -1,0 +1,36 @@
+(name [Include dropped file])
+
+(only-in source.php)
+
+(output snippet)
+
+(file-extensions php inc)
+
+(save nothing)
+
+(script [ruby <<-'RUBY'
+# Stores all the possible paths to the dropped file
+paths = []
+
+# Include the relative path as given by TM as a default
+# Possibly this should be disabled to favour absolute paths?
+paths << ENV['TM_DROPPED_FILE']
+if ENV['PHP_INCLUDE_PATH']
+  ENV['PHP_INCLUDE_PATH'].split(':').each do |dir|
+    dir << '/'
+    # Check each directory in the include path to see if it prefixes the requested file
+    if ENV['TM_DROPPED_FILEPATH'][0, dir.size] == dir
+      # If it matches, store the path to the file from this include directory 
+      paths << ENV['TM_DROPPED_FILEPATH'][dir.size..-1]
+    end
+  end
+end
+
+include_method = ENV['TM_MODIFIER_FLAGS'].include?('CONTROL') ? 'require' : 'include'
+
+include_method << '_once' if ENV['TM_MODIFIER_FLAGS'].include?('OPTION')
+
+# Find the shortest path
+path = paths.sort_by{|path| path.size}.reverse.pop
+puts "#{include_method} '#{path}';"
+RUBY])

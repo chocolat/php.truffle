@@ -1,0 +1,10 @@
+(name [Special: Return Inside an Array])
+
+(trigger
+    (key [[enter]]))
+
+(only-in [meta.array.empty.php punctuation.definition.array.end.php])
+
+(snippet [
+	%{0}
+])

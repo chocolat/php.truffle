@@ -1,0 +1,8 @@
+(name [COOKIE['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_COOKIE['%{1="variable"}']])

@@ -1,0 +1,10 @@
+(name [Start Docblock])
+
+(trigger
+    (tab /**))
+
+(only-in source.php)
+
+(snippet [/**
+ * %{0}
+ */])

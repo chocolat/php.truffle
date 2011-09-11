@@ -1,0 +1,8 @@
+(name [REQUEST['…']])
+
+(trigger
+    (tab $_))
+
+(only-in source.php)
+
+(snippet [$_REQUEST['%{1="variable"}']])

@@ -1,0 +1,8 @@
+(name return)
+
+(trigger
+    (tab ret))
+
+(only-in source.php)
+
+(snippet [return%{1};%{0}])
