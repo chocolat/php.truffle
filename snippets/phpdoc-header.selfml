@@ -10,7 +10,7 @@
  *
  * @author %{PHPDOC_AUTHOR="%{TM_FULLNAME}"}
  * @version $Id$
- * @copyright `echo $TM_ORGANIZATION_NAME`, `date +"%e %B, %Y" | sed 's/^ //'`
+ * @copyright %{`echo $TM_ORGANIZATION_NAME`}, %{`date +"%e %B, %Y" | sed 's/^ //'`}
  * @package %{3="default"}
  **/
 

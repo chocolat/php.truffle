@@ -5,5 +5,5 @@
 
 (only-in source.php)
 
-(snippet [throw new %{1}Exception(%{2=""%{3="Error Processing Request"}""}%{4=", %{5="1"}"});
+(snippet [throw new %{1}Exception(%{2="\"%{3="Error Processing Request"}\""}%{4=", %{5="1"}"});
 %{0}])

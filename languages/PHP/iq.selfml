@@ -30,9 +30,30 @@
 (in comment.block.documentation.phpdoc.php
     (spellchecking))
 
-(indentation.decrease [(?x) ^ (.*\*/)? \s* \} ( [^}{"']* \{ | \s* while \s* \( .* )? [;\s]* (//.*|/\*.*\*/\s*)? $|<\?(php)?\s+(else(if)?|end(if|for(each)?|while))])
+(indentation.decrease [(?x)
+	    ^ (.* \*/)? \s*
+	    (
+	        (\})         |
+	        (\)[;,])     |
+	        (else:)      |
+	        ((end(if|for(each)?|while|switch));)
+	    )
+	])
 
-(indentation.increase-next-line-only [^(?!.*(#|//|\*/|<\?))(?!.*[};:]\s*(//|/\*.*\*/\s*$)).*[^\s;:{}]\s*$|<\?php.+?\b(if|else(?:if)?|for(?:each)?|while)\b.*:(?!.*end\1)])
+(indentation.increase [(?x)
+	    (   \{ (?! .+ \} ) .*
+	    |   array\(
+	    |   ((else)?if|else|for(each)?|while|switch) .* :
+	    )   \s* (/[/*] .*)? $])
+
+(indentation.increase-next-line-only [(?x)^(?! .*? (<\?|\?>) )
+		( . ( (?![/*]) | /(/.*$|\*.*?\*/ \s*) ) )*
+	    [^\s;:{}(,] \s*
+		( /(/.*$|\*.*?\*/ \s*) )*
+		$
+	])
+
+(indentation.ignore-line ^\s*$)
 
 (pair “
     ”
