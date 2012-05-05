@@ -1,5 +1,4 @@
-(menu command.run-php
-    ---
+(menu
     (submenu Declarations
         (submenu [Wrapped in <?php … ?>] snippet.<?php-?> snippet.<?php-echo-___-?> [snippet.<?php-echo-htmlentities(___)-?>] [snippet.<?php-if-(___)-?>-___-<?php-endif-?>] [snippet.<?php-if-(___)-?>-___-<?php-else-?>-___-<?php-endif-?>] snippet.<?php-else-?> [snippet.<?php-foreach-(___)-___-<?php-endforeach-?>] snippet.<?php-$this->…-?> snippet.<?php-echo-$this->…-?>)
         [snippet.if(-)]
